@@ -22,7 +22,6 @@ class ProductRequest extends FormRequest
     public function rules(): array
     {
         return [
-			'sku' => 'required|string',
 			'name' => 'required|string',
 			'description' => 'required|string',
 			'stock' => 'required',

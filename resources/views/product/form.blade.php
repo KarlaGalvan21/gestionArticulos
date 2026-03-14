@@ -1,18 +1,12 @@
 <div class="row padding-1 p-1">
     <div class="col-md-12">
-        
         <div class="form-group mb-2 mb20">
-            <label for="sku" class="form-label">{{ __('Sku') }}</label>
-            <input type="text" name="sku" class="form-control @error('sku') is-invalid @enderror" value="{{ old('sku', $product?->sku) }}" id="sku" placeholder="Sku">
-            {!! $errors->first('sku', '<div class="invalid-feedback" role="alert"><strong>:message</strong></div>') !!}
-        </div>
-        <div class="form-group mb-2 mb20">
-            <label for="name" class="form-label">{{ __('Name') }}</label>
+            <label for="name" class="form-label">{{ __('Nombre') }}</label>
             <input type="text" name="name" class="form-control @error('name') is-invalid @enderror" value="{{ old('name', $product?->name) }}" id="name" placeholder="Name">
             {!! $errors->first('name', '<div class="invalid-feedback" role="alert"><strong>:message</strong></div>') !!}
         </div>
         <div class="form-group mb-2 mb20">
-            <label for="description" class="form-label">{{ __('Description') }}</label>
+            <label for="description" class="form-label">{{ __('Descripción') }}</label>
             <input type="text" name="description" class="form-control @error('description') is-invalid @enderror" value="{{ old('description', $product?->description) }}" id="description" placeholder="Description">
             {!! $errors->first('description', '<div class="invalid-feedback" role="alert"><strong>:message</strong></div>') !!}
         </div>
@@ -22,13 +16,17 @@
             {!! $errors->first('stock', '<div class="invalid-feedback" role="alert"><strong>:message</strong></div>') !!}
         </div>
         <div class="form-group mb-2 mb20">
-            <label for="price" class="form-label">{{ __('Price') }}</label>
+            <label for="price" class="form-label">{{ __('Precio') }}</label>
             <input type="text" name="price" class="form-control @error('price') is-invalid @enderror" value="{{ old('price', $product?->price) }}" id="price" placeholder="Price">
             {!! $errors->first('price', '<div class="invalid-feedback" role="alert"><strong>:message</strong></div>') !!}
         </div>
+        
         <div class="form-group mb-2 mb20">
-            <label for="active" class="form-label">{{ __('Active') }}</label>
-            <input type="text" name="active" class="form-control @error('active') is-invalid @enderror" value="{{ old('active', $product?->active) }}" id="active" placeholder="Active">
+            <label for="active" class="form-label">{{ __('Activo') }}</label>
+            <select name="active" id="active" class="form-control @error('active') is-invalid @enderror">
+                <option value="1" {{ old('active', $product?->active?? 1) == 1 ? 'selected' : '' }}>Yes</option>
+                <option value="0" {{ old('active', $product?->active ?? 1) == 0 ? 'selected' : '' }}>No</option>
+            </select>
             {!! $errors->first('active', '<div class="invalid-feedback" role="alert"><strong>:message</strong></div>') !!}
         </div>
 

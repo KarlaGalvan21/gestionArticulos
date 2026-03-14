@@ -11,7 +11,7 @@
                 <div class="card">
                     <div class="card-header" style="display: flex; justify-content: space-between; align-items: center;">
                         <div class="float-left">
-                            <span class="card-title">{{ __('Show') }} Product</span>
+                            <span class="card-title">{{ __('Vista Completa') }} Product</span>
                         </div>
                         <div class="float-right">
                             <a class="btn btn-primary btn-sm" href="{{ route('products.index') }}"> {{ __('Back') }}</a>
@@ -25,11 +25,11 @@
                                     {{ $product->sku }}
                                 </div>
                                 <div class="form-group mb-2 mb20">
-                                    <strong>Name:</strong>
+                                    <strong>Nombre:</strong>
                                     {{ $product->name }}
                                 </div>
                                 <div class="form-group mb-2 mb20">
-                                    <strong>Description:</strong>
+                                    <strong>Descripción:</strong>
                                     {{ $product->description }}
                                 </div>
                                 <div class="form-group mb-2 mb20">
@@ -37,11 +37,11 @@
                                     {{ $product->stock }}
                                 </div>
                                 <div class="form-group mb-2 mb20">
-                                    <strong>Price:</strong>
+                                    <strong>Precio:</strong>
                                     {{ $product->price }}
                                 </div>
                                 <div class="form-group mb-2 mb20">
-                                    <strong>Active:</strong>
+                                    <strong>Activo:</strong>
                                     {{ $product->active }}
                                 </div>
 
